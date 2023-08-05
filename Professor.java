@@ -52,7 +52,7 @@ public class Professor {
 
 }
 
-
+//apenas testando para ver se a classe estava funcionando.
     public static void main(String[] args) {
         Professor p1 = new Professor();
         p1.login="ben123";
