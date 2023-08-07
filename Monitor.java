@@ -1,21 +1,44 @@
-public class Professor {
-    final String nome = "Dr.Helielcio da Silva"; //como o professor é sempre o mesmo, então o nome é uma constante.
+public class Monitor {
+  
+    private String nome; 
     private String login;
     private String senha;
-    final boolean NiveldeAcesso=true; //o nivel de acesso do professor é sempre liberado(true).
+    private int matricula;
+    final boolean NiveldeAcesso=false; //o nivel de acesso do monitor é sempre negado(false).
 
 
-    public String getNomeProfessor() {
+    //métodos get e sets.
+    public String getNomeMonitor() {
         return nome;
     }
-    //métodos get e sets.
+    public void setNomeMonitor(String Name)
+    {
+         if(Name!= null && Name!= "\0")
+        this.nome = Name;
+        else
+        System.out.println("digite um nome válido");
+    }
+     public int matricula() {
+        return matricula;
+    }
+    public void setMatricula(int Mat)
+    {
+        int a = (int)(Math.log10(Mat)+1);//verifica se tem 10 digitos.
+        System.out.println(a);
+         if( Mat !=0  &&  a != 10 )
+        this.matricula=Mat;
+        else
+        System.out.println("digite um nome válido");
+    }
+
+
     public String getLogin()
     {
         return login;
     }
     public void setLogin(String Log)
     {
-        if(Log!= null && Log != "\0")
+        if(Log != null && Log != "\0")
         this.login=Log;
         else
         System.out.println("digite um login válido");
@@ -51,5 +74,5 @@ public class Professor {
     }
 
 }
-
 }
+
