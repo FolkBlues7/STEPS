@@ -4,6 +4,13 @@ public class Professor {
     private String senha;
     final boolean NiveldeAcesso=true; //o nivel de acesso do professor é sempre liberado(true).
 
+    public Professor(){};
+    //construtor que inicializa o professor
+    public Professor(String Log,String Pass)
+    {
+        setLogin(Log);
+        setSenha(Pass);
+    }
 
     public String getNomeProfessor() {
         return nome;
@@ -51,5 +58,9 @@ public class Professor {
     }
 
 }
-
+    public static void main(String[] args)
+    {
+        Professor p1= new Professor("ARIEL123","ben123");
+        System.out.println(p1.senha);
+    }
 }

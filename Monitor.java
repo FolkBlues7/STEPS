@@ -6,7 +6,15 @@ public class Monitor {
     private int matricula;
     final boolean NiveldeAcesso=false; //o nivel de acesso do monitor é sempre negado(false).
 
+    public Monitor(){};
 
+    public Monitor (String Name,String Log,String Pass,int mat)
+    {
+        setNomeMonitor(Name);
+        setLogin(Log);
+        setSenha(Pass);
+        setMatricula(mat);
+    }
     //métodos get e sets.
     public String getNomeMonitor() {
         return nome;
