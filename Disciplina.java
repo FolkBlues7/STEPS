@@ -51,22 +51,11 @@ public class Disciplina {
         else
         System.out.println("Digite uma descrição válida");
     }
-    //visualiza disciplina
-    public void visualizarDisciplina()
+    //visualiza disciplina e sobrescreve o ToString padrão
+    @Override
+    public String toString ()
     {
-        System.out.println("Nome da disciplina: "+ this.nome);
-        System.out.println("código da disciplina: "+ this.codigo);
-        System.out.println("Assunto da disciplina: "+ this.descricao);
-    }
-    public static void main(String[] args) {
-        Disciplina disciplina1 = new Disciplina("história",03,"conhecer a história");
-        /*disciplina1.setNome("POO");
-        disciplina1.setCodigo(001);
-        disciplina1.setDescricao("Disciplina de programação orientada a objetos");
-        disciplina1.visualizarDisciplina();*/
-        
-        
-
+       return ("Nome da disciplina: " + this.nome + "\n código da disciplina: " + this.codigo +"\n descrição da disciplina:" + this.descricao);  
     }
         
 }

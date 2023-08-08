@@ -58,9 +58,4 @@ public class Professor {
     }
 
 }
-    public static void main(String[] args)
-    {
-        Professor p1= new Professor("ARIEL123","ben123");
-        System.out.println(p1.senha);
-    }
 }
